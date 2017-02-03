@@ -86,7 +86,7 @@ When you want to include third-party packages in your project as "dependencies",
 
 To generate this file, type `npm init` and then follow the prompts. (Hit `Enter` to accept the default option):
 
-        name: (build-your-own-node-package) frivolipsum
+        name: (build-your-own-node-package) sillyipsum
         version: (1.0.0) 
         description: A silly fake data generator, a la lorem-ipsum.
         entry point: (index.js) 
@@ -98,7 +98,7 @@ To generate this file, type `npm init` and then follow the prompts. (Hit `Enter`
         About to write to /path/to/build-your-own-node-package/package.json:
 
         {
-          "name": "frivolipsum",
+          "name": "sillyipsum",
           "version": "1.0.0",
           "description": "A silly fake data generator, a la lorem-ipsum.",
           "main": "index.js",
@@ -173,9 +173,9 @@ $ node
 Let's create our first module, a silly [lorem-ipsum](https://en.wikipedia.org/wiki/Lorem_ipsum) style fake data generator!
 
 ```bash
-mkdir frivolipsum
-touch frivolipsum/index.js
-touch frivolipsum/test.js
+mkdir sillyipsum
+touch sillyipsum/index.js
+touch sillyipsum/test.js
 ```
 
 Add this to `index.js`:
@@ -191,14 +191,14 @@ Now open your node REPL:
 
 ```js
 $ node
-> var insultMe = require("./frivolipsum/index.js");    // THESE ARE THE SAME
-> var insultMe = require("./frivolipsum");             // THESE ARE THE SAME
+> var insultMe = require("./sillyipsum/index.js");    // THESE ARE THE SAME
+> var insultMe = require("./sillyipsum");             // THESE ARE THE SAME
 > insultMe();
 "You villainous tickle-brained barnacle!"
 > .exit
 ```
 
-> Note: The dot+slash at the beginning of "./frivolipsum/index.js" instructs node to look in the current directory!
+> Note: The dot+slash at the beginning of "./sillyipsum/index.js" instructs node to look in the current directory!
 
 ## Running your module via `test.js`
 Another way to execute your code is to use the `test.js` file.
@@ -206,7 +206,7 @@ Another way to execute your code is to use the `test.js` file.
 Add the code from above to `test.js`:
 
 ```js
-var insultMe = require("./frivolipsum");
+var insultMe = require("./sillyipsum");
 var output = insultMe();
 
 console.log(output);
@@ -215,18 +215,18 @@ console.log(output);
 To execute this code from your command line, type:
 
 ```bash
-$ node path/to/frivolipsum/index.js
+$ node path/to/sillyipsum/index.js
 "You villainous tickle-brained barnacle!"
 # or
-$ node path/to/frivolipsum
+$ node path/to/sillyipsum
 You villainous tickle-brained barnacle!
 ```
 
-> Note: When we name a file `index.js` or `index.html` we are indicating that it is the "main" entry point for the program. This makes it easy for developers (and programs!) to know exactly which file to run. That's why we can say `require("./frivolipsum") and can skip the `index.js` part. This is true for hosted `index.html` files too!
+> Note: When we name a file `index.js` or `index.html` we are indicating that it is the "main" entry point for the program. This makes it easy for developers (and programs!) to know exactly which file to run. That's why we can say `require("./sillyipsum") and can skip the `index.js` part. This is true for hosted `index.html` files too!
 
 
 ## Exercise
-Can you extend your frivolipsum module to include methods for generating fake data? Here are ideas:
+Can you extend your sillyipsum module to include methods for generating fake data? Here are ideas:
 
 - `loremIpsumSentence()` - A single [lorem ipsum](https://en.wikipedia.org/wiki/Lorem_ipsum) sentence.
 - `loremIpsumSentence(3)` - 3 lorem ipsum sentences.
