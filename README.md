@@ -169,6 +169,75 @@ $ node
 </details>
 
 
+## Building Your Package
+Let's create our first module, a silly [lorem-ipsum](https://en.wikipedia.org/wiki/Lorem_ipsum) style fake data generator!
+
+```bash
+mkdir frivolipsum
+touch frivolipsum/index.js
+touch frivolipsum/test.js
+```
+
+Add this to `index.js`:
+
+``` js
+module.exports
+module.exports.shakespearianInsult = function() {
+    return "You villainous tickle-brained barnacle!";
+}
+```
+
+Now open your node REPL:
+
+```js
+$ node
+> var insultMe = require("./frivolipsum/index.js");    // THESE ARE THE SAME
+> var insultMe = require("./frivolipsum");             // THESE ARE THE SAME
+> insultMe();
+"You villainous tickle-brained barnacle!"
+> .exit
+```
+
+> Note: The dot+slash at the beginning of "./frivolipsum/index.js" instructs node to look in the current directory!
+
+## Running your module via `test.js`
+Another way to execute your code is to use the `test.js` file.
+
+Add the code from above to `test.js`:
+
+```js
+var insultMe = require("./frivolipsum");
+var output = insultMe();
+
+console.log(output);
+```
+
+To execute this code from your command line, type:
+
+```bash
+$ node path/to/frivolipsum/index.js
+"You villainous tickle-brained barnacle!"
+# or
+$ node path/to/frivolipsum
+You villainous tickle-brained barnacle!
+```
+
+> Note: When we name a file `index.js` or `index.html` we are indicating that it is the "main" entry point for the program. This makes it easy for developers (and programs!) to know exactly which file to run. That's why we can say `require("./frivolipsum") and can skip the `index.js` part. This is true for hosted `index.html` files too!
+
+
+## Exercise
+Can you extend your frivolipsum module to include methods for generating fake data? Here are ideas:
+
+- `loremIpsumSentence()` - A single [lorem ipsum](https://en.wikipedia.org/wiki/Lorem_ipsum) sentence.
+- `loremIpsumSentence(3)` - 3 lorem ipsum sentences.
+- `random()` - A random number between 1-100;
+- `random(0,10)` - A random number between 0 and 10;
+- `state()` - A random state name.
+- `city()` - A random city name.
+- `streetAddress()` - A random street address.
+- `fullAddress()` - A full address (city, state, street).
+- The sky is the limit!
+
 ## Resources
 - NPM's guide to [Installing Packages])https://docs.npmjs.com/getting-started/installing-npm-packages-locally)
 - NPM's guide to [Using package.json](https://docs.npmjs.com/getting-started/using-a-package.json)
