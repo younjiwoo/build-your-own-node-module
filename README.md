@@ -131,7 +131,7 @@ Right now if you type `git status` it will list the `node_modules` folder, and w
 
 ```bash
     git add .gitignore
-    git commit -m "ignored node_modules
+    git commit -m "ignored node_modules"
     git add package.json
     git commit -m "added package.json, lodash dependency"
 ```
