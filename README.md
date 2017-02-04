@@ -179,14 +179,15 @@ $ node
 Let's create our first module, a silly [lorem-ipsum](https://en.wikipedia.org/wiki/Lorem_ipsum) style fake data generator!
 
 ```bash
+touch test.js
 mkdir sillyipsum
 touch sillyipsum/index.js
-touch sillyipsum/test.js
 ```
 
-Add this to `index.js`:
+Add this to `sillyipsum/index.js`:
 
 ``` js
+module.exports.sayHi = "hi";
 module.exports.shakespearianInsult = function() {
     return "You villainous tickle-brained barnacle!";
 }
@@ -198,12 +199,17 @@ Now open your node REPL:
 $ node
 > var sillyIpsum = require("./sillyipsum/index.js");    // THESE ARE THE SAME
 > var sillyIpsum = require("./sillyipsum");             // THESE ARE THE SAME
+> sillyipsum;
+{ sayHi: "hi", shakespearianInsult: [Function] }
 > sillyIpsum.shakespearianInsult();
 "You villainous tickle-brained barnacle!"
 > .exit
 ```
 
-> Note: The dot+slash at the beginning of "./sillyipsum/index.js" instructs node to look in the current directory!
+> Note: The dot+slash at the beginning of "./sillyipsum/index.js" instructs node to look in the *current* directory for a file called "index.js" in a folder called "sillyipsum" (are you in the right directory?)
+
+#### Why `index`.js?
+When we name a file `index.js` or `index.html` we are indicating that it is the "main" entry point for the program. This makes it easy for developers (and programs!) to know exactly which file to run. That's why we can say `require("./sillyipsum") and can skip the `index.js` part. This is true for hosted `index.html` files too!
 
 ## Running your module via `test.js`
 Another way to execute your code is to use the `test.js` file.
@@ -220,18 +226,12 @@ console.log(output);
 To execute this code from your command line, type:
 
 ```bash
-$ node path/to/sillyipsum/index.js
+$ node test.js
 "You villainous tickle-brained barnacle!"
-# or
-$ node path/to/sillyipsum
-You villainous tickle-brained barnacle!
 ```
 
-> Note: When we name a file `index.js` or `index.html` we are indicating that it is the "main" entry point for the program. This makes it easy for developers (and programs!) to know exactly which file to run. That's why we can say `require("./sillyipsum") and can skip the `index.js` part. This is true for hosted `index.html` files too!
-
-
 ## Exercise
-Can you extend your sillyipsum module to include methods for generating fake data? Here are ideas:
+Can you extend your sillyipsum module to include methods for generating fake data? Here are some ideas:
 
 - `loremIpsumSentence()` - A single [lorem ipsum](https://en.wikipedia.org/wiki/Lorem_ipsum) sentence.
 - `loremIpsumSentence(3)` - 3 lorem ipsum sentences.
@@ -242,6 +242,8 @@ Can you extend your sillyipsum module to include methods for generating fake dat
 - `streetAddress()` - A random street address.
 - `fullAddress()` - A full address (city, state, street).
 - The sky is the limit!
+
+Do you want to use Lodash in your module? (There are a lot of useful utility methods we can benifit from!). All you have to do is `require` lodash in your `index.js` file (like we did in the REPL examples), and you'll have full access to lodash!
 
 ## Resources
 - NPM's guide to [Installing Packages])https://docs.npmjs.com/getting-started/installing-npm-packages-locally)
