@@ -245,6 +245,8 @@ Can you extend your sillyipsum module to include methods for generating fake dat
 
 Do you want to use Lodash in your module? (There are a lot of useful utility methods we can benifit from!). All you have to do is `require` lodash in your `index.js` file (like we did in the REPL examples), and you'll have full access to lodash!
 
+Good luck and have fun with sillyIpsum!
+
 ## Resources
-- NPM's guide to [Installing Packages])https://docs.npmjs.com/getting-started/installing-npm-packages-locally)
+- NPM's guide to [Installing Packages](https://docs.npmjs.com/getting-started/installing-npm-packages-locally)
 - NPM's guide to [Using package.json](https://docs.npmjs.com/getting-started/using-a-package.json)
