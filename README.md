@@ -59,10 +59,11 @@ Using the lodash [`.last()`](https://lodash.com/docs/4.17.4#last) method we can 
 From inside your project directory:
 ```bash
 $ npm -v
-2.3.0       # Make sure you have node >= v2.3.0
+2.3.0       # Make sure you have npm >= v4.1.2
 
-$ npm install --save lodash
+$ npm install lodash
 # wait for it to install
+# You will see "WARN" messages --> that's okay!
 $ ls
 # README.md node_modules
 ```
@@ -84,7 +85,7 @@ Now your project directory has a new folder in it called `node_modules` and our 
 #### Setting Up `package.json`
 When you want to include third-party packages in your project as "dependencies", you need to list which versions of packages you're using. To make this easier, `npm` stores this information in a json object called `package.json`.
 
-To generate this file, type `npm init` and then follow the prompts. (Hit `Enter` to accept the default option):
+To generate this file, type `npm init` and then follow the prompts. (You can hit `Enter` to accept all the default options):
 
         name: (build-your-own-node-package) sillyipsum
         version: (1.0.0) 
@@ -117,7 +118,7 @@ To generate this file, type `npm init` and then follow the prompts. (Hit `Enter`
         Is this ok? (yes)
 
 
-You should see `"lodash"` listed as dependency in your `project.json`.
+Now you should see `"lodash"` listed as a dependency in your `project.json`.
 
 #### Make sure to `.gitignore` `node_modules`!
 You're going to be using a ton of third-party libraries and frameworks, so over time your `node_modules` folder can get pretty big. Let's tell `git` that it's okay to ignore our `node_modules` folder. All of our dependencies are listed in `package.json`, so it's easy for another developer to get up and running (all they have to do is type `npm install` and node will take care of the rest).
