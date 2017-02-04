@@ -82,7 +82,7 @@ Now your project directory has a new folder in it called `node_modules` and our 
 
 **Question**: What do you think is in `lodash/last.js`? (Take a look!)
 
-#### Setting Up `package.json`
+### Setting Up `package.json`
 When you want to include third-party packages in your project as "dependencies", you need to list which versions of packages you're using. To make this easier, `npm` stores this information in a json object called `package.json`.
 
 To generate this file, type `npm init` and then follow the prompts. (You can hit `Enter` to accept all the default options):
@@ -126,7 +126,7 @@ STOP and COMMIT!
     git commit -m "added package.json, lodash dependency"
 ```
 
-#### Make sure to `.gitignore` `node_modules`!
+### Make sure to `.gitignore` `node_modules`!
 You're going to be using a ton of third-party libraries and frameworks, so over time your `node_modules` folder can get pretty big. Let's tell `git` that it's okay to ignore our `node_modules` folder. All of our dependencies are listed in `package.json`, so it's easy for another developer to get up and running (all they have to do is type `npm install` and node will take care of the rest).
 
 Right now if you type `git status` it will list the `node_modules` folder, and we don't want that. To fix this:
@@ -142,9 +142,9 @@ STOP and COMMIT!
     git commit -m "ignored node_modules"
 ```
 
-#### Node REPL Practice
+## Node REPL Practice
 - Open and close the node REPL.
-- Open the REPL and make a syntactical mistake (e.g. `[{])`). How do you recover?
+- Open the REPL and make a syntactical mistake (e.g. if you typed `[{])` accidentally). How do you recover?
 - Import the lodash library into the REPL.
     + Are you sure you imported it?
 
