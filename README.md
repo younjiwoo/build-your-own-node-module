@@ -209,7 +209,7 @@ $ node
 > Note: The dot+slash at the beginning of "./sillyipsum/index.js" instructs node to look in the *current* directory for a file called "index.js" in a folder called "sillyipsum" (are you in the right directory?)
 
 #### Why `index`.js?
-When we name a file `index.js` or `index.html` we are indicating that it is the "main" entry point for the program. This makes it easy for developers (and programs!) to know exactly which file to run. That's why we can say `require("./sillyipsum") and can skip the `index.js` part. This is true for hosted `index.html` files too!
+When we name a file `index.js` or `index.html` we are indicating that it is the "main" entry point for the program. This makes it easy for developers (and programs!) to know exactly which file to run. That's why we can say `require("./sillyipsum")` and can skip the `index.js` part. This is true for hosted `index.html` files too!
 
 ## Running your module via `test.js`
 Another way to execute your code is to use the `test.js` file.
