@@ -187,7 +187,6 @@ touch sillyipsum/test.js
 Add this to `index.js`:
 
 ``` js
-module.exports
 module.exports.shakespearianInsult = function() {
     return "You villainous tickle-brained barnacle!";
 }
