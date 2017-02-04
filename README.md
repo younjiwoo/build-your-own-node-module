@@ -120,6 +120,12 @@ To generate this file, type `npm init` and then follow the prompts. (You can hit
 
 Now you should see `"lodash"` listed as a dependency in your `project.json`.
 
+STOP and COMMIT!
+```bash
+    git add package.json # only add this file
+    git commit -m "added package.json, lodash dependency"
+```
+
 #### Make sure to `.gitignore` `node_modules`!
 You're going to be using a ton of third-party libraries and frameworks, so over time your `node_modules` folder can get pretty big. Let's tell `git` that it's okay to ignore our `node_modules` folder. All of our dependencies are listed in `package.json`, so it's easy for another developer to get up and running (all they have to do is type `npm install` and node will take care of the rest).
 
@@ -130,11 +136,10 @@ Right now if you type `git status` it will list the `node_modules` folder, and w
 3. Now when you type `git status` you will see that `node_modules` is no longer listed.
 4. Now we're ready to `git add` and `git commit`!
 
+STOP and COMMIT!
 ```bash
-    git add .gitignore
+    git add .gitignore  # only add this file
     git commit -m "ignored node_modules"
-    git add package.json
-    git commit -m "added package.json, lodash dependency"
 ```
 
 #### Node REPL Practice
