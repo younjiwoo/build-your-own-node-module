@@ -59,7 +59,7 @@ Using the lodash [`.last()`](https://lodash.com/docs/4.17.4#last) method we can 
 From inside your project directory:
 ```bash
 $ npm -v
-2.3.0       # Make sure you have npm >= v4.1.2
+4.1.2       # Make sure you have npm >= v4.1.2
 
 $ npm install lodash
 # wait for it to install
