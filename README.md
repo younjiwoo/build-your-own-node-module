@@ -148,8 +148,8 @@ Right now if you type `git status` it will list the `node_modules` folder, and w
 <br>
 ```js
 $ node
-> var _ = require("lodash");
-> _.compact([null, 2, null, 5]);
+> var lodash = require("lodash");
+> lodash.compact([null, 2, null, 5]);
 [2, 5]
 ```
 </details>
@@ -164,7 +164,7 @@ $ node
 > Object.keys(lodash).length;
 308
 > lodash.keysIn(lodash).length;
-> 308
+308
 ```
 </details>
 
@@ -191,9 +191,9 @@ Now open your node REPL:
 
 ```js
 $ node
-> var insultMe = require("./sillyipsum/index.js");    // THESE ARE THE SAME
-> var insultMe = require("./sillyipsum");             // THESE ARE THE SAME
-> insultMe();
+> var sillyIpsum = require("./sillyipsum/index.js");    // THESE ARE THE SAME
+> var sillyIpsum = require("./sillyipsum");             // THESE ARE THE SAME
+> sillyIpsum.shakespearianInsult();
 "You villainous tickle-brained barnacle!"
 > .exit
 ```
@@ -206,8 +206,8 @@ Another way to execute your code is to use the `test.js` file.
 Add the code from above to `test.js`:
 
 ```js
-var insultMe = require("./sillyipsum");
-var output = insultMe();
+var sillyIpsum = require("./sillyipsum");
+var output = sillyIpsum.shakespearianInsult();
 
 console.log(output);
 ```
