@@ -250,5 +250,7 @@ Do you want to use Lodash in your module? (There are a lot of useful utility met
 Good luck and have fun with sillyIpsum!
 
 ## Resources
+- [Absolute Beginner's Guide to NPM](https://nodesource.com/blog/an-absolute-beginners-guide-to-using-npm)
+- [Basics of package.json and NPM](https://nodesource.com/blog/the-basics-of-package-json-in-node-js-and-npm)
 - NPM's guide to [Installing Packages](https://docs.npmjs.com/getting-started/installing-npm-packages-locally)
 - NPM's guide to [Using package.json](https://docs.npmjs.com/getting-started/using-a-package.json)
