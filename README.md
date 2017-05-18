@@ -150,20 +150,21 @@ STOP and COMMIT!
 
 <!-- DO NOT INDENT details/summary BLOCK -->
 <details>
-<summary>**Use the lodash [`.compact()`](https://lodash.com/docs/4.17.4#compact) method to transform `[null, 2, null, 5]` into `[2, 5]`** (Click Here)</summary>
-<br>
+<summary>Use the lodash [`.compact()`](https://lodash.com/docs/4.17.4#compact) method to transform `[null, 2, null, 5]` into `[2, 5]` (Click Here)</summary>
+
 ```js
 $ node
 > var lodash = require("lodash");
 > lodash.compact([null, 2, null, 5]);
 [2, 5]
 ```
+
 </details>
 
 <!-- DO NOT INDENT details/summary BLOCK -->
 <details>
-<summary>**Bonus: How many methods does the lodash library have?** (Click Here)</summary>
-<br>
+<summary>Bonus: How many methods does the lodash library have? (Click Here)</summary>
+
 ```js
 $ node
 > var lodash = require("lodash");
@@ -172,6 +173,7 @@ $ node
 > lodash.keysIn(lodash).length;
 308
 ```
+
 </details>
 
 
