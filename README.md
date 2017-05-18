@@ -150,7 +150,7 @@ STOP and COMMIT!
 
 <!-- DO NOT INDENT details/summary BLOCK -->
 <details>
-<summary>Use the lodash [`.compact()`](https://lodash.com/docs/4.17.4#compact) method to transform `[null, 2, null, 5]` into `[2, 5]` (Click Here)</summary>
+<summary>Use the lodash.compact() (https://lodash.com/docs/4.17.4#compact) method to transform `[null, 2, null, 5]` into `[2, 5]` (Click Here)</summary>
 
 ```js
 $ node
