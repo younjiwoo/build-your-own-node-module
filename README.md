@@ -118,7 +118,11 @@ To generate this file, type `npm init` and then follow the prompts. (You can hit
         Is this ok? (yes)
 
 
-Now you should see `"lodash"` listed as a dependency in your `project.json`.
+You won't see `"lodash"` listed as a dependency in your `project.json` until you explicitly tell npm to "--save" lodash.
+
+```bash
+npm install lodash --save # add lodash dependency to package.json
+```
 
 STOP and COMMIT!
 ```bash
