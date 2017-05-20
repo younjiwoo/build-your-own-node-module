@@ -1,0 +1,26 @@
+{
+  "name": "build-your-own-node-module",
+  "version": "1.0.0",
+  "description": "In this lab we will be exploring the node CLI and the concept of a javascript \"package\" or \"module\".",
+  "main": "index.js",
+  "directories": {
+    "example": "examples"
+  },
+  "dependencies": {
+    "lodash": "^4.17.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SF-WDI-LABS/build-your-own-node-module.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SF-WDI-LABS/build-your-own-node-module/issues"
+  },
+  "homepage": "https://github.com/SF-WDI-LABS/build-your-own-node-module#readme"
+}
